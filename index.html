@@ -1,1 +1,459 @@
-INDEX
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrive Island County - Resource Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Crisis Banner -->
+    <div class="crisis-banner">
+        <div class="container">
+            <div class="crisis-content">
+                <span class="crisis-text">
+                    <i class="fas fa-exclamation-circle"></i>
+                    In Crisis? Help is available 24/7.
+                </span>
+                <div class="crisis-numbers">
+                    <span class="phone-badge">
+                        <a href="tel:988" class="phone-link">
+                            <i class="fas fa-phone"></i> Call 988
+                        </a>
+                        <span class="separator">|</span>
+                        <a href="tel:1-800-584-3578" class="phone-link">1-800-584-3578</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="https://thriveisland-pdzk3ivd.manus.space/images/logo-leaf.png" alt="Thrive Logo">
+                    <span class="logo-text">
+                        Thrive<span class="logo-accent">ICPH</span>
+                    </span>
+                </div>
+
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-links desktop-nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#directory" class="nav-link">Directory</a>
+                    <a href="#map" class="nav-link">Map View</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#proposal" class="nav-link">Project Proposal</a>
+                </nav>
+
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                        <span>Español</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#directory" class="mobile-nav-link">Directory</a>
+            <a href="#map" class="mobile-nav-link">Map View</a>
+            <a href="#about" class="mobile-nav-link">About Us</a>
+            <a href="#proposal" class="mobile-nav-link">Project Proposal</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <img src="assets/hero-bg.jpg" alt="Island County Coastline" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Find help. Find hope. <br><span class="hero-highlight">Thrive Island County</span></h1>
+                <p class="hero-subtitle">A comprehensive community directory connecting you with local resources for housing, food, health, and more.</p>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="What service are you looking for? (e.g. 'food bank', 'shelter')" class="search-input">
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="location-input-group">
+                        <i class="fas fa-map-pin"></i>
+                        <select id="locationSelect" class="location-select">
+                            <option>All Locations</option>
+                            <option>North Whidbey</option>
+                            <option>Central Whidbey</option>
+                            <option>South Whidbey</option>
+                            <option>Camano Island</option>
+                        </select>
+                    </div>
+                    <button class="search-btn" id="searchBtn">Search</button>
+                </div>
+
+                <!-- Popular Searches -->
+                <div class="popular-searches">
+                    <span>Popular:</span>
+                    <button class="popular-tag">Food Bank</button>
+                    <button class="popular-tag">Housing Support</button>
+                    <button class="popular-tag">Mental Health</button>
+                    <button class="popular-tag">Transportation</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="wave-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Browse by Category</h2>
+                <p>Explore resources tailored to your specific needs. We've organized services to help you find what you need quickly.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card" data-category="health">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Health & Wellness</h3>
+                </div>
+                <div class="category-card" data-category="housing">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Housing & Shelter</h3>
+                </div>
+                <div class="category-card" data-category="food">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Food Security</h3>
+                </div>
+                <div class="category-card" data-category="transport">
+                    <div class="category-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Transportation</h3>
+                </div>
+                <div class="category-card" data-category="legal">
+                    <div class="category-icon">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h3>Legal Aid</h3>
+                </div>
+                <div class="category-card" data-category="seniors">
+                    <div class="category-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Senior Services</h3>
+                </div>
+                <div class="category-card" data-category="family">
+                    <div class="category-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Family Support</h3>
+                </div>
+                <div class="category-card" data-category="mental">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mental Health</h3>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <button class="btn btn-outline">View All Categories <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Resources Section -->
+    <section class="featured-resources">
+        <div class="container">
+            <div class="featured-header">
+                <div>
+                    <h2>Recently Added Resources</h2>
+                    <p>New services available in our community directory.</p>
+                </div>
+                <a href="#directory" class="view-all-link">View Full Directory <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Health</span>
+                        <span class="resource-location"><i class="fas fa-map-pin"></i> Central Whidbey</span>
+                    </div>
+                    <h3>WhidbeyHealth Medical Center</h3>
+                    <p>Comprehensive medical services including emergency care, surgery, and primary care clinics.</p>
+                    <div class="resource-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>101 N Main St, Coupeville, WA</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>360-678-5151</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-small">Website</button>
+                        <button class="btn btn-primary btn-small">More Info</button>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Housing</span>
+                        <span class="resource-location"><i class="fas fa-map-pin"></i> County Wide</span>
+                    </div>
+                    <h3>Island County Human Services</h3>
+                    <p>Housing assistance, mental health support, and substance abuse resources for residents.</p>
+                    <div class="resource-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>1 NE 7th St, Coupeville, WA</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>360-679-7350</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-small">Website</button>
+                        <button class="btn btn-primary btn-small">More Info</button>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Food</span>
+                        <span class="resource-location"><i class="fas fa-map-pin"></i> North Whidbey</span>
+                    </div>
+                    <h3>North Whidbey Help House</h3>
+                    <p>Community food bank providing emergency food assistance to families in need.</p>
+                    <div class="resource-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>1091 SE Hathaway St, Oak Harbor, WA</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>360-675-0681</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-small">Website</button>
+                        <button class="btn btn-primary btn-small">More Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Support CTA Section -->
+    <section class="community-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Together, We Thrive</h2>
+                    <p>Island County is stronger when we support each other. Whether you're seeking help or ready to give back, Thrive Island County connects you to the resources and community that make a difference.</p>
+                    <button class="btn btn-secondary">Get Started Today</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="#home" class="bottom-nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#directory" class="bottom-nav-item">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+        </a>
+        <a href="#map" class="bottom-nav-item">
+            <i class="fas fa-map"></i>
+            <span>Map</span>
+        </a>
+        <a href="#proposal" class="bottom-nav-item">
+            <i class="fas fa-file-alt"></i>
+            <span>Proposal</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>Thrive Island County</span>
+                    </div>
+                    <p>Connecting our community with essential health and human services. Find help, discover resources, and build a stronger Island County together.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#directory">Resource Directory</a></li>
+                        <li><a href="#map">Map View</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Crisis Lines</a></li>
+                        <li><a href="#">For Providers</a></li>
+                        <li><a href="#">Community Data</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>1 NE 6th St<br>Coupeville, WA 98239</span></li>
+                        <li><i class="fas fa-phone"></i> <span>(360) 679-7350</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>health@islandcountywa.gov</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Island County Public Health. All rights reserved.</p>
+                <div class="footer-credit">
+                    <span>Funded by Island County Public Health</span>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<style type="text/css">
+    .crisis-text, .crisis-numbers {
+    color: #ff0000 !important;
+        }
+        .crisis-content {
+            margin: -6px 0 !important;
+        }
+
+
+/* =========================
+   LOGO STYLING
+   ========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Logo Image */
+.logo img {
+    width: 42px !important;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Logo Text */
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Accent Text */
+.logo-accent {
+    color: #1693a3;
+}
+
+/* Hover Effects */
+.logo:hover img {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.logo:hover .logo-accent {
+    color: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo img {
+        width: 36px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+}
+
+        .gap-2 {
+    gap: calc(var(--spacing) * 2);
+}
+.items-center {
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+.flex {
+    min-width: 0;
+    min-height: 0;
+}
+a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+}
+@supports (color:color-mix(in lab,red,red)) {
+    * {
+        outline-color: 
+ color-mix(in oklab, var(--ring) 50%, transparent);
+    }
+}
+</style>
+</html>
